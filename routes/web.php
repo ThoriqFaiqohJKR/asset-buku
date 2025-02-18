@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/admin/login', [ControllerLogin::class, 'showAdminLogin'])->name('admin.login');
 Route::post('/admin/login', [ControllerLogin::class, 'loginAdmin']);
 
+Route::get('/login', function () {
+    return redirect('/admin/login');
+})->name('login');
+
 // Middleware langsung dipanggil di route
 Route::prefix('admin')->name('admin.')->middleware(['auth', RoleMiddleware::class . ':admin'])->group(function () {
     Route::get('dashboard', [ControllerLogin::class, 'showAdminDashboard'])->name('dashboard');
