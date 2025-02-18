@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contant_admin', function (Blueprint $table) {
+        Schema::create('contact_admin', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->integer('nomor');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */

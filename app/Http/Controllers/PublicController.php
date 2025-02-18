@@ -14,7 +14,7 @@ class PublicController extends Controller
     }
 
     
-    public function show($id) 
+     public function show($id) 
     {
         $book = DB::table('buku')->where('id', $id)->first();
     

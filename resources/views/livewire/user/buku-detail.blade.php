@@ -43,7 +43,16 @@
                   <span class="font-bold">Stok:</span>
                   <span>{{ $book->stok ?? 'Tidak tersedia' }}</span>
                </div>
+               <div class="mt-4 flex gap-4">
+        <button onclick="window.location.href='https://wa.me/+62{{ ltrim($contact1->nomor, '0') }}'" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none">
+         Contact Admin 1
+        </button>
+        <button onclick="window.location.href='https://wa.me/+62{{ ltrim($contact2->nomor, '0') }}'" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 focus:outline-none">
+         Contact Admin 2
+        </button>
+       </div>
             </div>
+            
          </div>
       </div>
    </div>

@@ -13,14 +13,23 @@ return new class extends Migration
     {
         Schema::create('buku', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_buku');  // Nama Buku
-            $table->text('ringkasan');  // Ringkasan Buku
-            $table->string('gambar_buku')->nullable();  // Gambar Buku
-            $table->integer('stok');  // Stok Buku
-            $table->string('qr_code')->nullable(); 
+            $table->string('nama_buku');
+            $table->text('ringkasan');
+            $table->string('gambar_buku')->nullable();
+            $table->integer('stok');
+            $table->enum('kategori', [
+                'fiksi', 'makanan', 'novel', 'cergam', 'komik', 'ensiklopedi', 'nomik', 
+                'antologi', 'dongeng', 'biografi', 'catatan', 'harian', 'novelet', 
+                'fotografi', 'karya ilmiah', 'tafsir', 'kamus', 'panduan_how_to', 
+                'atlas', 'buku_ilmiah', 'teks', 'majalah', 'buku_digital'
+            ]);
+            $table->string('qr_code')->nullable();
+            $table->enum('location', ['perpustakaan auriga', 'perpustakaan bang TM']);
+            $table->string('kode_uniq');
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.
