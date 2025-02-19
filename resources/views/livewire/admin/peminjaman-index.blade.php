@@ -51,7 +51,7 @@
                 <div class="px-4 py-2 border w-3/12">Barang/Buku</div>
                 <div class="px-4 py-2 border w-2/12">Tanggal Pinjam</div>
                 <div class="px-4 py-2 border w-2/12">Tanggal Kembali</div>
-                <div class="px-4 py-2 border w-1/12">Status</div>
+                <div class="px-4 py-2 border w-2/12">Status</div>
                 <div class="px-4 py-2 border w-1/12">Aksi</div>
             </div>
 
@@ -63,7 +63,7 @@
                     <div class="px-4 py-2 w-full md:w-3/12 truncate">{{ $data->barang }}</div>
                     <div class="px-4 py-2 w-full md:w-2/12 truncate">{{ $data->tanggal_pinjam }}</div>
                     <div class="px-4 py-2 w-full md:w-2/12 truncate">{{ $data->tanggal_kembali }}</div>
-                    <div class="px-4 py-2 w-full md:w-1/12 truncate">{{ $data->status }}</div>
+                    <div class="px-4 py-2 w-full md:w-2/12 truncate">{{ $data->status }}</div>
                     <div class="px-4 py-2 w-full md:w-1/12">
                         <div class="flex space-x-2">
                             <button class="hover:bg-black border hover:text-white px-4 py-2 rounded">

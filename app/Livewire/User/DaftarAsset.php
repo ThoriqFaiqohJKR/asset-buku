@@ -29,14 +29,14 @@ class DaftarAsset extends Component
                 $q->where('nama_barang', 'like', '%' . $this->search . '%')
                   ->orWhere('kode_uniq', 'like', '%' . $this->search . '%');
             });
-        }
+        } 
 
         // Filter berdasarkan kategori
         if (!empty($this->kategori)) {
-            $query->where('barang', $this->kategori);
+            $query->where('jenis_barang', $this->kategori);
         }
 
-        $assets = $query->paginate(10);
+        $assets = $query->paginate(12);
 
         return view('livewire.user.daftar-asset', [
             'assets' => $assets,

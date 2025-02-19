@@ -1,9 +1,9 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
-    <div class="min-h-screen bg-gray-800">
+    <div class="min-h-screen ">
         <div class="container mx-auto p-4">
-            <div class="bg-gray-700 shadow-md p-6">
-                <h2 class="text-2xl font-bold mb-4 text-white">Edit Contact</h2>
+            <div class="shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 ">Edit Contact</h2>
 
                 @if (session()->has('message'))
                     <div class="bg-green-500 text-white p-2 rounded mb-4">
@@ -13,13 +13,13 @@
 
                 <form wire:submit.prevent="updateContact">
                     <div class="mb-4">
-                        <label for="nama" class="font-semibold text-white">Name</label>
+                        <label for="nama" class="font-semibold ">Name</label>
                         <input type="text" id="nama" wire:model="nama" class="w-full border border-gray-300 p-2 rounded" />
                         @error('nama') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                     </div>
 
                     <div class="mb-4">
-                        <label for="nomor" class="font-semibold text-white">Phone</label>
+                        <label for="nomor" class="font-semibold">Phone</label>
                         <input 
                             type="text" 
                             id="nomor" 

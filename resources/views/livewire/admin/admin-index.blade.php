@@ -1,5 +1,5 @@
-<div class="container mx-auto p-4 bg-gray-800 min-h-screen">
-    <h1 class="text-2xl font-bold text-white">
+<div class="container mx-auto p-4 min-h-screen">
+    <h1 class="text-2xl font-bold">
         Admin Dashboard
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -119,7 +119,20 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    y: { beginAtZero: true }
+                    x: {
+                        ticks: { color: 'white' } // Warna label sumbu X jadi putih
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: 'white' } // Warna label sumbu Y jadi putih
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white' // Warna label legend jadi putih
+                        }
+                    }
                 }
             }
         });

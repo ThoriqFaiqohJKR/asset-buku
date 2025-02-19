@@ -11,18 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contact_admin', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->integer('nomor');
-            $table->timestamps();
+        Schema::table('peminjaman', function (Blueprint $table) {
+            //
+            $table->string('catatan')->nullable;
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('contact_admin');
+        Schema::table('peminjaman', function (Blueprint $table) {
+            //
+        });
     }
 };

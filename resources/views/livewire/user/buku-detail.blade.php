@@ -56,12 +56,14 @@
          </div>
       </div>
    </div>
-   <!-- Rekomendasi Buku -->
    <div class="flex justify-center mt-6">
-      <div class="lg:w-2/3 bg-white shadow-md rounded-lg p-6 w-full">
-         <h2 class="text-2xl font-bold text-center mb-4">
+   <h2 class="text-2xl text-white font-bold text-center mb-4">
             Rekomendasi Buku
          </h2>
+   </div>
+   <!-- Rekomendasi Buku -->
+   <div class="flex justify-center mt-6">
+      <div class="lg:w-2/3 bg-white shadow-md rounded-lg p-6 ">
 
          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($recommendations->where('kategori', $kategori) as $recommendedBook)

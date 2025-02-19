@@ -23,14 +23,22 @@
                 <!-- Jenis Barang -->
                 <div class="mb-4">
                     <label class="block text-gray-700 font-semibold">Jenis Barang</label>
-                    <select id="jenis_barang" wire:model="jenis_barang" class="w-full p-2 border rounded-md">
-                        <option value="" disabled selected>Pilih Jenis Barang</option>
-                        <option value="Elektronik">Elektronik</option>
-                        <option value="Pakaian">Pakaian</option>
-                        <option value="Makanan">Makanan</option>
-                        <option value="Perabotan">Perabotan</option>
-                        <option value="Kendaraan">Kendaraan</option>
-                    </select>
+                    <select wire:model="jenis_barang" id="jenis_barang" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                    <option value="" disabled selected>Pilih Jenis</option>
+                    <option value="building">Building</option>
+                    <option value="kendaraan">Kendaraan</option>
+                    <optgroup label="Peralatan">
+                        <option value="peralatan mebel">Peralatan Mebel</option>
+                        <option value="peralatan non elektronik">Peralatan Non Elektronik</option>
+                        <option value="peralatan elektronik">Peralatan Elektronik</option>
+                        <option value="peralatan drone">Peralatan Drone</option>
+                        <option value="peralatan multimedia">Peralatan Multimedia</option>
+                    </optgroup>
+                    <optgroup label="Lain-lain">
+                        <option value="software">Software</option>
+                        <option value="perlengkapan">Perlengkapan</option>
+                    </optgroup>
+                </select>
                     @error('jenis_barang') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
                 <!-- Harga Barang -->

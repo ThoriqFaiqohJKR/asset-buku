@@ -85,7 +85,7 @@ Route::get('/admin/logout', function () {
 
 Route::get('/user/book/{id}', [PublicController::class, 'show'])->name('user.book.detail');
 Route::get('/user/list/book', [PublicController::class, 'list'])->name('user.book.list');
-Route::get('/user/asset/{id}', [PublicController::class, 'showaseet'])->name('user.asset.detail');
+Route::get('/user/asset/{id}', [PublicController::class, 'showasset'])->name('user.asset.detail');
 Route::get('/user/list/asset', [PublicController::class, 'listasset'])->name('user.asset.list');
 
 Route::get('/', function () {

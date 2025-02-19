@@ -43,12 +43,19 @@
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold" for="kategori">Kategori Buku</label>
                 <select wire:model="kategori" id="kategori" class="w-full p-2 border rounded-md">
-                    
-                    <option value="Fiksi">Fiksi</option>
-                    <option value="Non-Fiksi">Non-Fiksi</option>
-                    <option value="Pendidikan">Pendidikan</option>
-                    <option value="Sejarah">Sejarah</option>
-                    <option value="Teknologi">Teknologi</option>
+                <option value="fiksi">Fiksi</option>
+<option value="makanan">Makanan</option>
+<option value="novel">Novel</option>
+<option value="cergam">Cerita Gambar</option>
+<option value="komik">Komik</option>
+<option value="ensiklopedi">Ensiklopedi</option>
+<option value="biografi">Biografi</option>
+<option value="dongeng">Dongeng</option>
+<option value="biografi">Biografi</option>
+<option value="fotografi">Fotografi</option>
+<option value="majalah">Majalah</option>
+<option value="kamus">Kamus</option>
+<option value="biografi">Biografi</option>
                 </select>
                 @error('kategori') <span class="text-red-500">{{ $message }}</span> @enderror
             </div>

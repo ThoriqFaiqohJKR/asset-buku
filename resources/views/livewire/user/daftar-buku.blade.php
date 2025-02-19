@@ -16,18 +16,15 @@
       </button>
    </div>
 
-   <!-- Categories Dropdown -->
+   <!-- Categories Dropdown --> 
    <div class="w-full max-w-5xl mb-4">
-      <select 
-         wire:model="kategori" 
-         class="w-full p-2 rounded border border-gray-300"
-      >
-         <option value="">All Categories</option>
-         @foreach($categories as $category)
-            <option value="{{ $category }}">{{ $category }}</option>
-         @endforeach
-      </select>
-   </div>
+        <select wire:model="kategori" class="w-full p-2 rounded border border-gray-300">
+            <option value="">Semua Kategori</option>
+            @foreach($categories as $category)
+                <option value="{{ $category }}">{{ ucfirst($category) }}</option>
+            @endforeach
+        </select>
+    </div>
 
    <!-- Book Grid -->
    <div class="bg-white p-4 rounded shadow w-full max-w-5xl min-h-[500px] flex flex-col">
